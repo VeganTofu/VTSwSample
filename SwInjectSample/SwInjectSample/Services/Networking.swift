@@ -23,7 +23,7 @@ struct Network:Networking {
 }
 
 func getRequestWithManager(manager: AFHTTPSessionManager, path: String, successCallback: AnyObject -> (), failureCallback: NSError! -> ()) {
-  manager.GET(path, parameters: nil, success: { (task, response) in
+  manager.GET(path, parameters: nil, progress: nil, success: { (task, response) in
     successCallback(response!)
     }) { (task, error) in
       failureCallback(error)
