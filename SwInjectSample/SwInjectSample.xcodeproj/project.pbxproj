@@ -14,6 +14,10 @@
 		3A30F4781D2A53090033E835 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A30F4761D2A53090033E835 /* LaunchScreen.storyboard */; };
 		3A30F4831D2A53090033E835 /* SwInjectSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A30F4821D2A53090033E835 /* SwInjectSampleTests.swift */; };
 		3A30F48E1D2A53090033E835 /* SwInjectSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A30F48D1D2A53090033E835 /* SwInjectSampleUITests.swift */; };
+		3A30F49E1D2A58360033E835 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A30F49D1D2A58360033E835 /* MainViewController.swift */; };
+		3A30F4A31D2A58740033E835 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A30F4A21D2A58740033E835 /* MainViewModel.swift */; };
+		3A30F4A51D2A59E40033E835 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A30F4A41D2A59E40033E835 /* Constants.swift */; };
+		3A30F4A81D2A5A010033E835 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A30F4A71D2A5A010033E835 /* Networking.swift */; };
 		49160420183AD2D6013E238D /* Pods_SwInjectSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 347DE609A2A02F402506A2B0 /* Pods_SwInjectSample.framework */; };
 		7DCC26BE9120B850E5EA5500 /* Pods_SwInjectSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23BC01FD068817A8990E7B8A /* Pods_SwInjectSampleTests.framework */; };
 		D3075F0F5E7215967F726B41 /* Pods_SwInjectSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD8EB98B0861CB02C3679B7 /* Pods_SwInjectSampleUITests.framework */; };
@@ -52,6 +56,11 @@
 		3A30F4891D2A53090033E835 /* SwInjectSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwInjectSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A30F48D1D2A53090033E835 /* SwInjectSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwInjectSampleUITests.swift; sourceTree = "<group>"; };
 		3A30F48F1D2A53090033E835 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A30F49D1D2A58360033E835 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Controllers/MainViewController.swift; sourceTree = "<group>"; };
+		3A30F4A21D2A58740033E835 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewModel.swift; path = ViewModels/MainViewModel.swift; sourceTree = "<group>"; };
+		3A30F4A41D2A59E40033E835 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3A30F4A71D2A5A010033E835 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Networking.swift; path = Services/Networking.swift; sourceTree = "<group>"; };
+		3A30F4A91D2A5B280033E835 /* SwInjectSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwInjectSample-Bridging-Header.h"; sourceTree = "<group>"; };
 		44D85EF5AC23CBBB86DA65A1 /* Pods-SwInjectSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwInjectSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwInjectSample/Pods-SwInjectSample.release.xcconfig"; sourceTree = "<group>"; };
 		53DF498D7178279C15BB2462 /* Pods-SwInjectSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwInjectSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwInjectSampleTests/Pods-SwInjectSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		92AE0A7E7F170D6548DFBB55 /* Pods-SwInjectSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwInjectSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwInjectSample/Pods-SwInjectSample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,12 +123,16 @@
 		3A30F46C1D2A53090033E835 /* SwInjectSample */ = {
 			isa = PBXGroup;
 			children = (
+				3A30F4A61D2A59F30033E835 /* Services */,
+				3A30F4A11D2A58600033E835 /* ViewModels */,
+				3A30F49B1D2A58190033E835 /* Controllers */,
 				3A30F46D1D2A53090033E835 /* AppDelegate.swift */,
-				3A30F46F1D2A53090033E835 /* ViewController.swift */,
 				3A30F4711D2A53090033E835 /* Main.storyboard */,
 				3A30F4741D2A53090033E835 /* Assets.xcassets */,
 				3A30F4761D2A53090033E835 /* LaunchScreen.storyboard */,
 				3A30F4791D2A53090033E835 /* Info.plist */,
+				3A30F4A41D2A59E40033E835 /* Constants.swift */,
+				3A30F4A91D2A5B280033E835 /* SwInjectSample-Bridging-Header.h */,
 			);
 			path = SwInjectSample;
 			sourceTree = "<group>";
@@ -140,6 +153,31 @@
 				3A30F48F1D2A53090033E835 /* Info.plist */,
 			);
 			path = SwInjectSampleUITests;
+			sourceTree = "<group>";
+		};
+		3A30F49B1D2A58190033E835 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A30F46F1D2A53090033E835 /* ViewController.swift */,
+				3A30F49D1D2A58360033E835 /* MainViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		3A30F4A11D2A58600033E835 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3A30F4A21D2A58740033E835 /* MainViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		3A30F4A61D2A59F30033E835 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3A30F4A71D2A5A010033E835 /* Networking.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		4263AA8B254B953F654DE97D /* Pods */ = {
@@ -427,8 +465,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A30F4A51D2A59E40033E835 /* Constants.swift in Sources */,
+				3A30F49E1D2A58360033E835 /* MainViewController.swift in Sources */,
 				3A30F4701D2A53090033E835 /* ViewController.swift in Sources */,
+				3A30F4A81D2A5A010033E835 /* Networking.swift in Sources */,
 				3A30F46E1D2A53090033E835 /* AppDelegate.swift in Sources */,
+				3A30F4A31D2A58740033E835 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,10 +613,13 @@
 			baseConfigurationReference = 92AE0A7E7F170D6548DFBB55 /* Pods-SwInjectSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwInjectSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vegantofuapps.SwInjectSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwInjectSample/SwInjectSample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -583,10 +628,12 @@
 			baseConfigurationReference = 44D85EF5AC23CBBB86DA65A1 /* Pods-SwInjectSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwInjectSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vegantofuapps.SwInjectSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwInjectSample/SwInjectSample-Bridging-Header.h";
 			};
 			name = Release;
 		};
