@@ -1,0 +1,6 @@
+framework module Pods_SwInjectSampleUITests {
+  umbrella header "Pods-SwInjectSampleUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
